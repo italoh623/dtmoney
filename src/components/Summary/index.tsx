@@ -44,13 +44,19 @@ export function Summary() {
           <img src={outcomeImg} alt="Saídas" />
         </header>
         <strong>
-          - {new Intl.NumberFormat('pt-BR', {
+          -{new Intl.NumberFormat('pt-BR', {
             style: 'currency',
             currency: 'BRL'
           }).format(sumary.withdraws)}
         </strong>
       </div>
-      <div className="highlight-backgroud">
+      <div className=
+        {
+          sumary.total < 0 
+          ? 'highlight-backgroud-negative'
+          : 'highlight-backgroud-positive'
+        }
+      >
         <header>
           <p>Entradas</p>
           <img src={total} alt="Total" />

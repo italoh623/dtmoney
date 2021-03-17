@@ -27,8 +27,13 @@ export const Container = styled.main`
       line-height: 3rem
     }
 
-    &.highlight-backgroud {
+    &.highlight-backgroud-positive {
       background: var(--green);
+      color: #FFFFFF;
+    }
+
+    &.highlight-backgroud-negative {
+      background: var(--red);
       color: #FFFFFF;
     }
   }
